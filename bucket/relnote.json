@@ -1,0 +1,21 @@
+{
+    "version": "0.3.0",
+    "description": "Turn a git range into clean GitHub release notes or a Keep a Changelog section. No config, no GitHub API.",
+    "homepage": "https://loki-inu.github.io/relnote/",
+    "license": "MIT",
+    "notes": "relnote needs Python 3.11+ on PATH. If you do not have it: scoop install python",
+    "suggest": {
+        "Python": "python"
+    },
+    "url": "https://github.com/loki-inu/relnote/releases/download/v0.3.0/relnote.pyz",
+    "hash": "9d5945c5b04a5c636740ba27d86151a21451743612a44c64fdec74de9b3e4e2a",
+    "pre_install": "Set-Content -Path \"$dir\\relnote.cmd\" -Value '@python \"%~dp0relnote.pyz\" %*' -Encoding Ascii",
+    "bin": "relnote.cmd",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/loki-inu/relnote/releases/download/v$version/relnote.pyz",
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
