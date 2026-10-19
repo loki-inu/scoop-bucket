@@ -27,7 +27,7 @@ relnote --next-version                    # suggest the next semver tag
 relnote --changelog CHANGELOG.md --changelog-title v1.3.0
 ```
 
-Docs: https://loki-inu.github.io/relnote/
+Docs: https://loki-inu.github.io/relnote/ · Windows and PowerShell guide: https://loki-inu.github.io/relnote/windows.html (write files with `relnote --output notes.md`; Windows PowerShell 5.1 turns `>` into UTF-16)
 
 The manifest installs the official single-file release (`relnote.pyz`) and checks it against the release `SHA256SUMS`. CI installs it with Scoop on Windows and generates notes from a test repo on every push.
 
